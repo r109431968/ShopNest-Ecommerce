@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ShopNest.Domain\ShopNest.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

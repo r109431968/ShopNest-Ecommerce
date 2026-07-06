@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ShopNest.Application.Features.Products.Queries
 {
-    public class GetProductByIdQueries : IRequest<Product>
+    public class GetProductByIdQueries : IRequest<Product?>
     {
         public int Id { get; set; }
 

@@ -104,12 +104,11 @@ namespace ShopNest.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id, [FromBody] DeleteProductCommand command)
+        public async Task<IActionResult> Delete(int id)
         {
             try
             {
-                command.Id = id;
-                var product = await _mediator.Send(command);
+                var product = await _mediator.Send(new DeleteCategoryCommand(id));
                 if (product == 0)
                     return NotFound(new { message = $"Product with id {id} not found." });
                 return Ok(new { Id = product, Message = "Product deleted successfully" });

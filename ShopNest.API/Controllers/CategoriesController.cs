@@ -55,7 +55,7 @@ namespace ShopNest.API.Controllers
             }
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateCategoryCommand command)
         {
@@ -71,6 +71,7 @@ namespace ShopNest.API.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] UpdateCategoryCommand command)
         {
@@ -89,6 +90,7 @@ namespace ShopNest.API.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPatch("{id}/status")]
         public async Task<IActionResult> ToggleCategoryStatus(int id, [FromBody] ToggleCategoryStatusCommand command)
         {
@@ -107,6 +109,7 @@ namespace ShopNest.API.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

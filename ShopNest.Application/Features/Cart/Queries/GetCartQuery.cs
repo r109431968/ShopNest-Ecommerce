@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using ShopNest.Application.DTOs.Cart;
 using System;
 using System.Collections.Generic;
 using System.Linq;
